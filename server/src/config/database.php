@@ -21,7 +21,7 @@ $capsule->bootEloquent();
 // Test connection
 try {
     $capsule->connection()->getPdo();
-    echo "Connected successfully!";
+    // echo "Connected successfully!";
 } catch (\Exception $e) {
     die("Could not connect to the database. Error: " . $e->getMessage());
 }

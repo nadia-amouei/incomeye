@@ -14,9 +14,9 @@ class Router {
 
     public function dispatch($method, $uri) {
         $method = strtoupper($method);
-        $uri = explode('?', $uri)[0];        
+        $uri = explode('?', $uri)[0];
         
-        if (isset($this->routes[$method][$uri])) { 
+        if (isset($this->routes[$method][$uri])) {
             call_user_func($this->routes[$method][$uri]);
             
         } else {

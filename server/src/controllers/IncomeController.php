@@ -7,8 +7,9 @@ use GuzzleHttp\Psr7\ServerRequest as Request;
 class IncomeController {
 
     public function getAll(Request $request, Response $response) {
-        $incomes = Income::all();
-        $response->getBody()->write(json_encode($incomes));
-        return $response->withHeader('Content-Type', 'application/json');
+        echo 'ttt';
+        // $incomes = Income::all();
+        // $response->getBody()->write(json_encode($incomes));
+        // return $response->withHeader('Content-Type', 'application/json');
     }
 }
