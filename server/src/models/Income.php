@@ -3,10 +3,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 class Income extends Model {
-    protected $fillable = ['amount', 'user_id', 'date'];
+    protected $fillable = ['amount', 'user_id'];
 
-    public function categories()
+    public function user()
     {
-        return $this->hasMany(Category::class);
+        return $this->belongsTo(User::class);
+    }
+    
+    public function category()
+    {
+      return $this->belongsTo(Category::class);
     }
 }
